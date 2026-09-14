@@ -1,0 +1,199 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 7 0 R >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 1442 >>
+stream
+BT
+/F1 12 Tf
+/F1 20 Tf
+50 790 Td
+(DOCUMENTACAO TECNICA - E-COMMERCE ADS) Tj
+0 -24 Td
+/F1 12 Tf
+50 0 Td
+(Aluno: ____________________    RA: ____________________) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(1. Objetivo) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Sistema web fullstack para cadastro de produtos, registro de vendas) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(e consulta de compras, com persistencia em banco de dados.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(2. Tecnologias) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Front-end: HTML5, CSS3 e JavaScript.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Back-end/API: Node.js e Express.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Banco de dados: SQLite com Better SQLite3.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(3. Funcionalidades) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Catalogo, pesquisa, categorias e carrinho de compras.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Cadastro e manutencao de produtos e estoque.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Registro de clientes e vendas com baixa automatica de estoque.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Historico de compras por e-mail e painel administrativo.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(4. Instalacao) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(1\) Entre na pasta backend e execute npm install.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(2\) Execute npm run seed.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(3\) Execute npm start.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(4\) Abra http://localhost:3000.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Senha administrativa inicial: admin123.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 1372 >>
+stream
+BT
+/F1 12 Tf
+/F1 20 Tf
+50 790 Td
+(ARQUITETURA E REGISTRO VISUAL) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(5. Arquitetura em camadas) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Interface web -> API REST -> Persistencia SQLite.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Pastas: frontend, backend, database e documentacao.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(6. Rotas principais) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(GET /api/products - lista os produtos.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(POST /api/products - cadastra um produto.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(PUT /api/products/:id - altera um produto.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(DELETE /api/products/:id - desativa um produto.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(POST /api/sales - registra uma venda.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(GET /api/sales?email=... - consulta as compras.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(7. Prints das telas) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Inclua antes da entrega prints do catalogo, carrinho,) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(historico de compras e painel administrativo funcionando.) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(Use o modelo editavel em documentacao/documentacao.html.) Tj
+0 -24 Td
+/F1 15 Tf
+50 0 Td
+(8. Consideracoes finais) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(O sistema atende as funcionalidades minimas solicitadas e inclui) Tj
+0 -24 Td
+/F1 11 Tf
+50 0 Td
+(recursos extras de estoque, categorias, status e administracao.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000373 00000 n 
+0000000443 00000 n 
+0000001936 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3359
+%%EOF
