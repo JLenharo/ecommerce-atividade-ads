@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loja ADS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#" data-page="store">Loja<span>ADS</span></a>
+  <nav>
+    <button data-page="store">Produtos</button>
+    <button data-page="orders">Minhas compras</button>
+    <button data-page="admin">Administração</button>
+    <button class="cart-button" data-page="cart">Carrinho <b id="cart-count">0</b></button>
+  </nav>
+</header>
+
+<main>
+<section id="store" class="page active">
+  <div class="hero"><p>E-commerce acadêmico fullstack</p><h1>Produtos para deixar seu dia melhor.</h1></div>
+  <div class="filters">
+    <input id="search" placeholder="Pesquisar produtos...">
+    <select id="category-filter"><option value="">Todas as categorias</option></select>
+  </div>
+  <div id="products" class="product-grid"></div>
+</section>
+
+<section id="cart" class="page">
+  <h2>Seu carrinho</h2>
+  <div class="two-columns">
+    <div id="cart-items" class="panel"></div>
+    <form id="checkout-form" class="panel">
+      <h3>Finalizar compra</h3>
+      <label>Nome<input name="name" required></label>
+      <label>E-mail<input name="email" type="email" required></label>
+      <label>Telefone<input name="phone"></label>
+      <label>Endereço<textarea name="address" required></textarea></label>
+      <div class="total">Total: <strong id="cart-total">R$ 0,00</strong></div>
+      <button class="primary" type="submit">Confirmar compra</button>
+    </form>
+  </div>
+</section>
+
+<section id="orders" class="page">
+  <h2>Consultar compras realizadas</h2>
+  <form id="orders-form" class="inline panel">
+    <input id="orders-email" type="email" placeholder="E-mail usado na compra" required>
+    <button class="primary">Consultar</button>
+  </form>
+  <div id="orders-list"></div>
+</section>
+
+<section id="admin" class="page">
+  <div id="admin-login" class="panel narrow">
+    <h2>Acesso administrativo</h2>
+    <p>Use a senha definida no servidor.</p>
+    <input id="admin-key" type="password" placeholder="Senha">
+    <button id="admin-enter" class="primary">Entrar</button>
+  </div>
+  <div id="admin-area" hidden>
+    <div class="admin-head"><h2>Painel administrativo</h2><button id="admin-exit">Sair</button></div>
+    <div class="stats">
+      <div><span id="stat-products">0</span>Produtos ativos</div>
+      <div><span id="stat-sales">0</span>Vendas registradas</div>
+      <div><span id="stat-revenue">R$ 0</span>Faturamento</div>
+    </div>
+    <div class="two-columns">
+      <form id="product-form" class="panel">
+        <h3 id="product-title">Cadastrar produto</h3>
+        <input type="hidden" name="id">
+        <label>Nome<input name="name" required></label>
+        <label>Descrição<textarea name="description" required></textarea></label>
+        <label>Preço<input name="price" type="number" min="0" step="0.01" required></label>
+        <label>Estoque<input name="stock" type="number" min="0" required></label>
+        <label>Categoria<select name="category_id" id="product-category"></select></label>
+        <label>URL da imagem<input name="image_url"></label>
+        <div class="actions"><button class="primary">Salvar</button><button type="button" id="cancel-edit">Limpar</button></div>
+      </form>
+      <div class="panel"><h3>Produtos cadastrados</h3><div id="admin-products"></div></div>
+    </div>
+    <div class="panel"><h3>Vendas</h3><div id="admin-sales"></div></div>
+  </div>
+</section>
+</main>
+<div id="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
