@@ -1,0 +1,6 @@
+node_modules/
+database/ecommerce.db
+database/ecommerce.db-shm
+database/ecommerce.db-wal
+.env
+.DS_Store
