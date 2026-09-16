@@ -1,9 +1,17 @@
-INSERT OR IGNORE INTO categories (id, name) VALUES
-(1, 'Eletrônicos'), (2, 'Casa'), (3, 'Acessórios');
+PRAGMA foreign_keys = OFF;
+DELETE FROM sale_items; DELETE FROM sales; DELETE FROM customers; DELETE FROM products; DELETE FROM categories;
+DELETE FROM sqlite_sequence WHERE name IN ('categories','products','customers','sales','sale_items');
+PRAGMA foreign_keys = ON;
 
-INSERT OR IGNORE INTO products
-(id, name, description, price, stock, image_url, category_id, active) VALUES
-(1, 'Fone Bluetooth', 'Fone sem fio com estojo de carregamento.', 129.90, 15, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700', 1, 1),
-(2, 'Teclado Mecânico', 'Teclado compacto com iluminação.', 249.90, 8, 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=700', 1, 1),
-(3, 'Luminária de Mesa', 'Iluminação moderna para estudo e trabalho.', 89.90, 12, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=700', 2, 1),
-(4, 'Mochila Urbana', 'Mochila resistente com compartimento para notebook.', 179.90, 10, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700', 3, 1);
+INSERT INTO categories (id,name) VALUES
+(1,'Romance'),(2,'Fantasia'),(3,'Suspense'),(4,'Clássicos');
+
+INSERT INTO products (id,name,description,price,stock,image_url,category_id,active) VALUES
+(1,'Verity — Colleen Hoover','Um suspense psicológico intenso sobre uma escritora contratada para concluir a obra de uma autora famosa e os segredos perturbadores que encontra.',35.87,18,'https://covers.openlibrary.org/isbn/9781538724736-L.jpg',3,1),
+(2,'Quarta Asa — Rebecca Yarros','Dragões, rivalidades e uma academia militar mortal dão início à série O Empyriano.',131.50,12,'https://covers.openlibrary.org/isbn/9781649374042-L.jpg',2,1),
+(3,'A Empregada — Freida McFadden','Um thriller cheio de reviravoltas sobre uma casa aparentemente perfeita e uma funcionária que percebe que nada é o que parece.',44.90,20,'https://covers.openlibrary.org/isbn/9781728296210-L.jpg',3,1),
+(4,'Quando a Lua Hatched — Sarah A. Parker','Uma fantasia épica de dragões, magia, destinos cruzados e segredos capazes de transformar reinos.',69.90,10,'https://covers.openlibrary.org/isbn/9780063415843-L.jpg',2,1),
+(5,'É Assim que Acaba — Colleen Hoover','Uma história marcante sobre amor, escolhas difíceis e a coragem necessária para romper ciclos.',39.90,15,'https://covers.openlibrary.org/isbn/9781501110368-L.jpg',1,1),
+(6,'O Príncipe Cruel — Holly Black','Jude precisa conquistar seu lugar na perigosa Corte das Fadas enquanto enfrenta o príncipe Cardan.',54.90,11,'https://covers.openlibrary.org/isbn/9780316310314-L.jpg',2,1),
+(7,'Os Sete Maridos de Evelyn Hugo — Taylor Jenkins Reid','Uma lendária estrela de Hollywood decide contar sua verdadeira história a uma jornalista desconhecida.',49.90,16,'https://covers.openlibrary.org/isbn/9781501161933-L.jpg',1,1),
+(8,'Orgulho e Preconceito — Jane Austen','O clássico romance de Elizabeth Bennet e Mr. Darcy em uma edição para novos leitores.',34.90,14,'https://covers.openlibrary.org/isbn/9780141439518-L.jpg',4,1);
