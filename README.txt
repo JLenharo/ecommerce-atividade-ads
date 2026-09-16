@@ -1,37 +1,46 @@
-E-COMMERCE ADS - SISTEMA WEB FULLSTACK
+LIVRARIA VALARIS - E-COMMERCE FULLSTACK
 
-Requisitos
-- Node.js 18 ou superior
+IDENTIDADE VISUAL
+- Azul: #0A1E3F
+- Bege/dourado: #D9B777
+- Branco e cinza-claro
+- Tipografia: Cormorant Garamond e Montserrat
+
+REQUISITOS
+- Node.js 22 LTS recomendado
 - npm
 
-Instalacao
+INSTALACAO
 1. Baixe ou clone o projeto.
 2. Abra o terminal na pasta backend.
 3. Execute: npm install
-4. Execute: npm run seed
-5. Execute: npm start
-6. Abra http://localhost:3000
+4. Se você já executou a versão antiga, apague database/ecommerce.db.
+5. Execute: npm run seed
+6. Execute: npm start
+7. Abra http://localhost:3000
 
-Acesso administrativo de demonstracao
-- E-mail: admin@loja.com
+ACESSO ADMINISTRATIVO
 - Senha: admin123
 
-Estrutura
-- frontend/: interface HTML, CSS e JavaScript
-- backend/: API Node.js/Express
-- database/: scripts SQL
-- documentacao/: documentacao tecnica e guia para gerar o PDF
+FUNCIONALIDADES
+- Catálogo de livros, pesquisa e filtro por gênero
+- Tela de detalhes do livro
+- Sacola, quantidades, entrega ou retirada
+- Finalização e simulação de métodos de pagamento
+- Registro da venda e baixa automática do estoque
+- Acompanhamento e consulta de pedidos
+- Login demonstrativo de cliente
+- Administração de livros, estoque, pedidos e status
+- Layout responsivo inspirado no protótipo Figma da Livraria Valaris
 
-Funcionalidades
-- Catalogo, pesquisa e filtro por categoria
-- Carrinho de compras
-- Cadastro de clientes
-- Registro de vendas com baixa automatica de estoque
-- Consulta de compras
-- Administracao de produtos e vendas
+OBSERVACAO
+Os pagamentos são apenas demonstrativos e não realizam cobranças reais.
 
-Para entrega no Moodle
-1. Teste o sistema e capture as telas indicadas em documentacao/documentacao.html.
-2. Abra documentacao/documentacao.html no navegador e use Imprimir > Salvar como PDF.
-3. Salve como documentacao.pdf na raiz.
-4. Compacte a pasta e renomeie para raXXXXXX.zip, substituindo pelo seu RA.
+BRANCH DE SEGURANCA
+A versão genérica anterior foi preservada em: backup-ecommerce-original
+
+ENTREGA NO MOODLE
+1. Teste o sistema e faça capturas das telas.
+2. Atualize documentacao/documentacao.html com os prints.
+3. Gere documentacao.pdf pelo navegador.
+4. Compacte tudo como raXXXXXX.zip.
