@@ -1,125 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Livraria Valaris — histórias para atravessar mundos.">
-  <title>Livraria Valaris</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Livraria Valaris — histórias para atravessar mundos.">
+<title>Livraria Valaris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
 <div class="top-strip">Frete grátis para compras acima de R$ 199 · Enviamos para todo o Brasil</div>
-<header>
-  <a class="brand" href="#" data-page="store"><img src="assets/logo-valaris.png" alt="Símbolo Livraria Valaris"><span>Livraria <b>Valaris</b></span></a>
-  <nav aria-label="Menu principal">
-    <button data-page="store">Início</button>
-    <a href="#catalogo" data-page="store">Livros</a>
-    <button data-page="orders">Meus pedidos</button>
-    <button data-page="admin">Administração</button>
-    <button class="cart-button" data-page="cart" aria-label="Abrir carrinho">Sacola <b id="cart-count">0</b></button>
-  </nav>
-</header>
-
+<header><a class="brand" href="#" data-page="store"><img src="assets/logo-valaris.png" alt="Logo Valaris"><span>Livraria <b>Valaris</b></span></a>
+<nav><button data-page="store">Início</button><a href="#catalogo" data-page="store">Livros</a><button data-page="orders">Meus pedidos</button><button data-page="account">Minha conta</button><button data-page="admin">Administração</button><button class="cart-button" data-page="cart">Sacola <b id="cart-count">0</b></button></nav></header>
 <main>
 <section id="store" class="page active">
-  <div class="hero">
-    <div class="hero-copy">
-      <span class="eyebrow">Livros que despertam novos mundos</span>
-      <h1>Livraria<br><strong>Valaris</strong></h1>
-      <p>Histórias capazes de atravessar o tempo, transformar pensamentos e acompanhar você em cada capítulo.</p>
-      <a href="#catalogo" class="hero-button">Explorar catálogo</a>
-    </div>
-  </div>
+<div class="hero"><div class="hero-copy"><span class="eyebrow">Livros que despertam novos mundos</span><h1>Livraria<br><strong>Valaris</strong></h1><p>Histórias capazes de atravessar o tempo, transformar pensamentos e acompanhar você em cada capítulo.</p><a href="#catalogo" class="hero-button">Explorar catálogo</a></div></div>
+<section class="benefits"><div><span>✦</span><p><b>Curadoria especial</b><small>Títulos escolhidos para você</small></p></div><div><span>♧</span><p><b>Embalagem cuidadosa</b><small>Livros protegidos até sua casa</small></p></div><div><span>↻</span><p><b>Compra segura</b><small>Atendimento em todas as etapas</small></p></div></section>
+<section id="catalogo" class="catalog"><div class="section-heading"><div><span class="eyebrow">Descubra sua próxima leitura</span><h2>Mais vendidos</h2></div><p>Ofertas especiais, grandes autores e histórias inesquecíveis.</p></div>
+<div class="filters"><label class="search-box"><span>⌕</span><input id="search" placeholder="Busque por título, autor ou palavra-chave..."></label><select id="category-filter"><option value="">Todos os gêneros</option></select></div><div id="products" class="product-grid"></div></section>
+<section class="quote"><img src="assets/logo-valaris.png" alt=""><blockquote>“Um livro é uma porta. Algumas levam para outros lugares; as melhores levam para outras versões de nós mesmos.”</blockquote><p>— Livraria Valaris</p></section></section>
 
-  <section class="benefits" aria-label="Benefícios">
-    <div><span>✦</span><p><b>Curadoria especial</b><small>Títulos escolhidos para você</small></p></div>
-    <div><span>♧</span><p><b>Embalagem cuidadosa</b><small>Livros protegidos até sua casa</small></p></div>
-    <div><span>↻</span><p><b>Compra segura</b><small>Atendimento em todas as etapas</small></p></div>
-  </section>
+<section id="product-detail" class="page inner-page"><button class="back-link" data-page="store">← Voltar aos livros</button><div id="product-view" class="product-view"></div></section>
 
-  <section id="catalogo" class="catalog">
-    <div class="section-heading"><div><span class="eyebrow">Descubra sua próxima leitura</span><h2>Nosso catálogo</h2></div><p>Dos clássicos inesquecíveis aos fenômenos contemporâneos.</p></div>
-    <div class="filters">
-      <label class="search-box"><span>⌕</span><input id="search" placeholder="Busque por título, autor ou palavra-chave..."></label>
-      <select id="category-filter"><option value="">Todos os gêneros</option></select>
-    </div>
-    <div id="products" class="product-grid"></div>
-  </section>
+<section id="cart" class="page inner-page"><div class="page-title"><span class="eyebrow">Sua seleção</span><h2>Sacola de compras</h2></div><div class="two-columns"><div><div id="cart-items" class="panel"></div>
+<div class="panel shipping"><h3>Calcular frete</h3><div class="inline"><input id="zip-code" placeholder="CEP"><button type="button" id="calculate-shipping">Calcular</button></div><label class="shipping-option"><input type="radio" name="shipping" value="15" checked><span>⌂</span><b>Receber em casa<small>5 dias úteis</small></b><strong>R$ 15,00</strong></label><label class="shipping-option"><input type="radio" name="shipping" value="0"><span>▣</span><b>Retirada na loja<small>Após confirmação do pagamento</small></b><strong>Grátis</strong></label></div></div>
+<form id="checkout-form" class="panel checkout"><h3>Dados para o pedido</h3><label>Nome completo<input name="name" required></label><label>E-mail<input name="email" type="email" required></label><label>Telefone<input name="phone"></label><label>Endereço de entrega<textarea name="address" required></textarea></label><div class="summary"><span>Produtos <b id="products-total">R$ 0,00</b></span><span>Frete <b id="shipping-total">R$ 15,00</b></span></div><div class="total">Total <strong id="cart-total">R$ 0,00</strong></div><button class="primary" type="submit">Ir para pagamento</button></form></div></section>
 
-  <section class="quote">
-    <img src="assets/logo-valaris.png" alt="">
-    <blockquote>“Um livro é uma porta. Algumas levam para outros lugares; as melhores levam para outras versões de nós mesmos.”</blockquote>
-    <p>— Livraria Valaris</p>
-  </section>
-</section>
+<section id="payment" class="page inner-page narrow-flow"><div class="page-title"><span class="eyebrow">Finalização</span><h2>Pagamento</h2></div><div class="panel"><h3>Selecione o método de pagamento</h3><div class="payment-grid"><button data-payment="Boleto"><span>▥</span>Boleto</button><button data-payment="Cartão"><span>▣</span>Cartão</button><button data-payment="QR Code"><span>▦</span>QR Code</button><button data-payment="Pix"><span>◇</span>Pix</button></div><p class="payment-note">Ambiente acadêmico: nenhuma cobrança real será realizada.</p></div></section>
 
-<section id="cart" class="page inner-page">
-  <div class="page-title"><span class="eyebrow">Sua seleção</span><h2>Sacola de livros</h2></div>
-  <div class="two-columns">
-    <div id="cart-items" class="panel"></div>
-    <form id="checkout-form" class="panel checkout">
-      <h3>Finalizar compra</h3>
-      <label>Nome completo<input name="name" required></label>
-      <label>E-mail<input name="email" type="email" required></label>
-      <label>Telefone<input name="phone"></label>
-      <label>Endereço de entrega<textarea name="address" required></textarea></label>
-      <div class="total">Total <strong id="cart-total">R$ 0,00</strong></div>
-      <button class="primary" type="submit">Confirmar pedido</button>
-    </form>
-  </div>
-</section>
+<section id="tracking" class="page inner-page narrow-flow"><div class="page-title"><span class="eyebrow">Pedido confirmado</span><h2>Acompanhamento</h2></div><div class="panel"><h3>Concluído!</h3><p>Recebemos seu pedido. Agora é só acompanhar cada etapa até a entrega.</p><div class="timeline"><div class="done">Realizando pedido</div><div class="done">Pagamento concluído</div><div>Enviado para transportadora</div><div>Em curso de envio</div><div>Encomenda entregue</div></div><button id="copy-tracking" class="outline">Copiar código de rastreio</button></div></section>
 
-<section id="orders" class="page inner-page">
-  <div class="page-title"><span class="eyebrow">Acompanhe suas leituras</span><h2>Meus pedidos</h2></div>
-  <form id="orders-form" class="inline panel">
-    <input id="orders-email" type="email" placeholder="Digite o e-mail usado na compra" required>
-    <button class="primary">Consultar pedidos</button>
-  </form>
-  <div id="orders-list"></div>
-</section>
+<section id="account" class="page inner-page narrow-flow"><div id="account-card" class="panel account-card"><div class="wordmark"><small>Livraria</small>Valaris</div><h2>Entre na sua conta</h2><form id="login-form"><label>Usuário ou e-mail<input name="email" type="email" required></label><label>Senha<input name="password" type="password" required></label><button class="primary">Entrar</button></form><p>Não tem conta? <a href="#" id="create-account">Criar conta</a></p><button class="google-button">ⓖ Entrar com Google</button></div></section>
 
-<section id="admin" class="page inner-page">
-  <div id="admin-login" class="panel narrow">
-    <img class="admin-logo" src="assets/logo-valaris.png" alt="">
-    <h2>Acesso administrativo</h2>
-    <p>Gerencie o catálogo e acompanhe os pedidos da Valaris.</p>
-    <input id="admin-key" type="password" placeholder="Senha administrativa">
-    <button id="admin-enter" class="primary">Entrar</button>
-  </div>
-  <div id="admin-area" hidden>
-    <div class="admin-head"><div><span class="eyebrow">Gestão Valaris</span><h2>Painel administrativo</h2></div><button id="admin-exit">Sair</button></div>
-    <div class="stats">
-      <div><span id="stat-products">0</span>Livros ativos</div>
-      <div><span id="stat-sales">0</span>Pedidos registrados</div>
-      <div><span id="stat-revenue">R$ 0</span>Faturamento</div>
-    </div>
-    <div class="two-columns admin-grid">
-      <form id="product-form" class="panel">
-        <h3 id="product-title">Cadastrar livro</h3>
-        <input type="hidden" name="id">
-        <label>Título<input name="name" required></label>
-        <label>Descrição<textarea name="description" required></textarea></label>
-        <label>Preço<input name="price" type="number" min="0" step="0.01" required></label>
-        <label>Estoque<input name="stock" type="number" min="0" required></label>
-        <label>Gênero<select name="category_id" id="product-category"></select></label>
-        <label>URL da capa<input name="image_url"></label>
-        <div class="actions"><button class="primary">Salvar livro</button><button type="button" id="cancel-edit">Limpar</button></div>
-      </form>
-      <div class="panel"><h3>Catálogo cadastrado</h3><div id="admin-products"></div></div>
-    </div>
-    <div class="panel"><h3>Pedidos recebidos</h3><div id="admin-sales"></div></div>
-  </div>
-</section>
+<section id="orders" class="page inner-page"><div class="page-title"><span class="eyebrow">Acompanhe suas leituras</span><h2>Meus pedidos</h2></div><form id="orders-form" class="inline panel"><input id="orders-email" type="email" placeholder="Digite o e-mail usado na compra" required><button class="primary">Consultar pedidos</button></form><div id="orders-list"></div></section>
+
+<section id="admin" class="page inner-page"><div id="admin-login" class="panel narrow"><img class="admin-logo" src="assets/logo-valaris.png" alt=""><h2>Acesso administrativo</h2><p>Gerencie o catálogo e acompanhe os pedidos.</p><input id="admin-key" type="password" placeholder="Senha administrativa"><button id="admin-enter" class="primary">Entrar</button></div>
+<div id="admin-area" hidden><div class="admin-head"><div><span class="eyebrow">Gestão Valaris</span><h2>Painel administrativo</h2></div><button id="admin-exit">Sair</button></div><div class="stats"><div><span id="stat-products">0</span>Livros ativos</div><div><span id="stat-sales">0</span>Pedidos registrados</div><div><span id="stat-revenue">R$ 0</span>Faturamento</div></div>
+<div class="two-columns admin-grid"><form id="product-form" class="panel"><h3 id="product-title">Cadastrar livro</h3><input type="hidden" name="id"><label>Título e autor<input name="name" required></label><label>Descrição<textarea name="description" required></textarea></label><label>Preço<input name="price" type="number" min="0" step="0.01" required></label><label>Estoque<input name="stock" type="number" min="0" required></label><label>Gênero<select name="category_id" id="product-category"></select></label><label>URL da capa<input name="image_url"></label><div class="actions"><button class="primary">Salvar livro</button><button type="button" id="cancel-edit">Limpar</button></div></form><div class="panel"><h3>Catálogo cadastrado</h3><div id="admin-products"></div></div></div><div class="panel"><h3>Pedidos recebidos</h3><div id="admin-sales"></div></div></div></section>
 </main>
-
-<footer>
-  <div class="footer-brand"><img src="assets/logo-valaris.png" alt=""><div><b>Livraria Valaris</b><small>Onde cada história encontra seu leitor.</small></div></div>
-  <p>Projeto acadêmico de e-commerce · 2026</p>
-</footer>
-<div id="toast"></div>
-<script src="js/app.js"></script>
-</body>
-</html>
+<footer><div class="footer-brand"><img src="assets/logo-valaris.png" alt=""><div><b>Livraria Valaris</b><small>Onde cada história encontra seu leitor.</small></div></div><p>Projeto acadêmico de e-commerce · 2026</p></footer><div id="toast"></div><script src="js/app.js"></script></body></html>
